@@ -37,7 +37,10 @@ deleted from the database.
 1. Clone the repository.
 2. Create a MySQL database :"gbg".
 3. Add your credits in config.php
-4. Run the following commands:
+4. Run the following command to migrate the database:
+```
+php migrate.php
+```
 5. Start the application:
 
 ```
