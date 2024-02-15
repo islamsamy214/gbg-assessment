@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  php:
+    container_name: gbg_php
+    build: .
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    networks:
+      - gbg
+  db:
+    container_name: gbg_db
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootPassword
+      MYSQL_DATABASE: gbg
+      MYSQL_USER: gbguser
+      MYSQL_PASSWORD: gbgpassword
+    ports:
+      - "3366:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - gbg
+volumes:
+  db_data:
+
+networks:
+  gbg:
+    driver: bridge

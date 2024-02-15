@@ -2,11 +2,8 @@
 <html>
 <head>
     <title>Add User</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="addUser.js"></script>
 </head>
-<body>
-    <h2>Add User</h2>
+<body>    
     <form id="userForm" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username"><br><br>
@@ -18,7 +15,7 @@
         <input type="password" id="password" name="password"><br><br>
 
         <label for="birthdate">Birthdate:</label>
-        <input type="text" id="birthdate" name="birthdate"><br><br>
+        <input type="date" id="birthdate" name="birthdate"><br><br>
 
         <label for="phone">Phone number:</label>
         <input type="text" id="phone" name="phone"><br><br>
@@ -28,5 +25,8 @@
 
         <input type="submit" value="Submit">
     </form>
+    <a href="/">Back to list</a>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./View/addUser.js"></script>
 </html>

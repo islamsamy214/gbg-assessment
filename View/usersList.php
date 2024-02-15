@@ -6,7 +6,10 @@
     </style>
 </head>
 <body>
+    <div>
     <h2>Users List</h2>
+    <a href="/create">Create User</a>
+    </div>
     <table id="usersTable">
         <thead>
             <tr>
@@ -26,6 +29,6 @@
         </tbody>
     </table>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="usersList.js"></script>
+    <script src="./View/usersList.js"></script>
 </body>
 </html>

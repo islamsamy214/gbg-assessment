@@ -12,4 +12,20 @@ class Database {
     public function getConnection() {
         return $this->connection;
     }
+
+    public function query($sql) {
+        return $this->connection->query($sql);
+    }
+
+    public function prepare($sql) {
+        return $this->connection->prepare($sql);
+    }
+
+    public function execute($stmt) {
+        return $stmt->execute();
+    }
+
+    public function escapeString($string) {
+        return $this->connection->real_escape_string($string);
+    }
 }

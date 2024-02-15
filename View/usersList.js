@@ -14,13 +14,13 @@ $(document).ready(function() {
         var userId = $(this).data('userid');
         if (confirm('Are you sure you want to delete this user?')) {
             $.ajax({
-                url: 'deleteUser.php', // Assuming this is the endpoint to delete a user
+                url: '/delete', // Assuming this is the endpoint to delete a user
                 type: 'POST',
                 data: {userId: userId},
                 success: function(response) {
                     alert(response); // Display success message
-                    // Remove the deleted row from the table
-                    $(this).closest('tr').remove();
+                    // Reload the page
+                    location.reload();
                 },
                 error: function(xhr, status, error) {
                     alert('Error deleting user: ' + error); // Display error message

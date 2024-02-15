@@ -1,6 +1,6 @@
 <?php
 
-require_once 'UserModel.php';
+require_once './Model/UserModel.php';
 
 class UserController
 {
@@ -9,6 +9,11 @@ class UserController
     public function __construct($db)
     {
         $this->userModel = new UserModel($db);
+    }
+
+    public function create()
+    {
+        include './View/addUser.php';
     }
 
     public function add()
@@ -34,12 +39,13 @@ class UserController
     public function list()
     {
         $users = $this->userModel->getUsers();
-        include 'usersList.php';
+        include './View/usersList.php';
     }
 
-    public function delete($userId)
+    public function delete()
     {
-        if ($this->userModel->deleteUser($userId)) {
+        $user_id = $_POST["userId"];
+        if ($this->userModel->deleteUser($user_id)) {
             // User deleted successfully
             echo "User deleted successfully!";
         } else {
