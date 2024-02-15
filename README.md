@@ -31,3 +31,17 @@ deleted from the database.
 • The data to the popup needs to be pulled by Ajax.
 • The popup will be in the center of the screen and will not scroll with the page.
 • The popup needs to have a close button.
+
+## Installation Steps
+
+1. Clone the repository.
+2. Create a MySQL database :"gbg".
+3. Add your credits in config.php
+4. Run the following commands:
+5. Start the application:
+
+```
+php -S localhost:8000
+```
+
+and open this URL in your browser `http://localhost:8000`
